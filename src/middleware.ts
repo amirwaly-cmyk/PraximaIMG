@@ -75,6 +75,11 @@ const MAINTENANCE_HTML = `<!doctype html>
 </html>`;
 
 export function middleware() {
+  // Local development (`npm run dev`) bypasses maintenance mode so you can keep
+  // previewing your changes. Only the deployed (production) site is held offline.
+  if (process.env.NODE_ENV !== "production") {
+    return NextResponse.next();
+  }
   return new NextResponse(MAINTENANCE_HTML, {
     status: 503,
     headers: {
