@@ -45,140 +45,15 @@ export interface Supervisor {
 }
 
 /* ------------------------------------------------------------------ */
-/* Seed supervisors                                                    */
+/* Supervisors                                                         */
 /* ------------------------------------------------------------------ */
 
-export const SUPERVISORS: Supervisor[] = [
-  {
-    id: "amir-waly",
-    name: "Dr Amir Waly",
-    postNominals: "MBBS, FRACGP",
-    practiceName: "Aureus Private Physician",
-    suburb: "Bayswater",
-    state: "WA",
-    level: 3,
-    specialty: "General Practice",
-    modes: ["on-site", "remote"],
-    availability: "accepting",
-    bio: "Level 3 GP supervisor with a special interest in skin cancer medicine, telehealth and residential aged care. Experienced supervising IMGs through Limited registration and toward Fellowship.",
-    yearsExperience: 12,
-    clinicalInterests: [
-      "Skin cancer medicine",
-      "Telehealth",
-      "Residential aged care (RACF)",
-      "Chronic disease management",
-    ],
-    languages: ["English", "Arabic"],
-    practiceType: "Urban GP / Telehealth",
-  },
-  {
-    id: "priya-nair",
-    name: "Dr Priya Nair",
-    postNominals: "MBBS, FRACGP",
-    practiceName: "Riverside Family Practice",
-    suburb: "Parramatta",
-    state: "NSW",
-    level: 2,
-    specialty: "General Practice",
-    modes: ["on-site"],
-    availability: "accepting",
-    bio: "Family GP and Level 2 supervisor focused on women's health and mental health in a busy multicultural community practice. Enjoys mentoring early-career IMGs.",
-    yearsExperience: 8,
-    clinicalInterests: [
-      "Women's health",
-      "Mental health",
-      "Paediatrics",
-      "Preventive care",
-    ],
-    languages: ["English", "Hindi", "Tamil"],
-    practiceType: "Urban GP",
-  },
-  {
-    id: "james-osullivan",
-    name: "Dr James O'Sullivan",
-    postNominals: "MBBS, FACRRM",
-    practiceName: "Goldfields Rural Medical",
-    suburb: "Mareeba",
-    state: "QLD",
-    level: 3,
-    specialty: "Rural Generalist (GP)",
-    modes: ["on-site", "remote"],
-    availability: "waitlist",
-    bio: "Rural generalist and Level 3 supervisor with extensive emergency and procedural experience. Supports IMGs settling into rural and remote practice across Far North Queensland.",
-    yearsExperience: 16,
-    clinicalInterests: [
-      "Emergency medicine",
-      "Procedural GP",
-      "Aboriginal & Torres Strait Islander health",
-      "Chronic disease",
-    ],
-    languages: ["English"],
-    practiceType: "Rural GP",
-  },
-  {
-    id: "mei-chen",
-    name: "Dr Mei Chen",
-    postNominals: "MBBS, FRACGP",
-    practiceName: "Southbank Health Collective",
-    suburb: "Southbank",
-    state: "VIC",
-    level: 1,
-    specialty: "General Practice",
-    modes: ["on-site"],
-    availability: "accepting",
-    bio: "On-site Level 1 supervisor at a teaching-focused metropolitan clinic, well suited to IMGs in the early stages of Limited registration. Passionate about structured day-one support.",
-    yearsExperience: 5,
-    clinicalInterests: [
-      "Diabetes & endocrinology",
-      "Preventive health",
-      "Travel medicine",
-    ],
-    languages: ["English", "Mandarin", "Cantonese"],
-    practiceType: "Urban GP",
-  },
-  {
-    id: "david-thompson",
-    name: "Dr David Thompson",
-    postNominals: "MBBS, FRACGP",
-    practiceName: "Adelaide Hills Medical",
-    suburb: "Stirling",
-    state: "SA",
-    level: 2,
-    specialty: "General Practice",
-    modes: ["remote"],
-    availability: "not-accepting",
-    bio: "Level 2 supervisor offering remote supervision for experienced IMGs, with a focus on cardiovascular risk and men's health. Currently at capacity.",
-    yearsExperience: 11,
-    clinicalInterests: [
-      "Cardiovascular health",
-      "Men's health",
-      "Chronic disease management",
-    ],
-    languages: ["English"],
-    practiceType: "Urban GP / Telehealth",
-  },
-  {
-    id: "aisha-rahman",
-    name: "Dr Aisha Rahman",
-    postNominals: "MBBS, FRACGP",
-    practiceName: "Tamar Valley Family Health",
-    suburb: "Launceston",
-    state: "TAS",
-    level: 2,
-    specialty: "General Practice",
-    modes: ["on-site", "remote"],
-    availability: "waitlist",
-    bio: "Level 2 supervisor with a strong interest in refugee and migrant health, supporting IMGs adapting to the Australian system in a regional Tasmanian setting.",
-    yearsExperience: 7,
-    clinicalInterests: [
-      "Refugee & migrant health",
-      "Chronic disease",
-      "Antenatal shared care",
-    ],
-    languages: ["English", "Bengali"],
-    practiceType: "Regional GP",
-  },
-];
+/**
+ * Intentionally empty. The earlier mock/seed supervisors were removed so the
+ * live directory never presents fictional people as real supervisors. Add real,
+ * verified listings here (or wire this up to the database) before launch.
+ */
+export const SUPERVISORS: Supervisor[] = [];
 
 /* ------------------------------------------------------------------ */
 /* Accessors (swap these for Supabase queries later)                   */

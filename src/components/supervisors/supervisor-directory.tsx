@@ -1,7 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { SearchX } from "lucide-react";
+import Link from "next/link";
+import { SearchX, UserPlus, Users } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -58,6 +59,35 @@ export function SupervisorDirectory() {
     setLevel("any");
     setMode("either");
     setAvailability("any");
+  }
+
+  // No supervisors are listed yet — show an inviting empty state instead of
+  // the filter UI (which would be meaningless against an empty directory).
+  if (ALL_SUPERVISORS.length === 0) {
+    return (
+      <div
+        id="directory"
+        className="flex flex-col items-center rounded-xl border border-dashed px-6 py-16 text-center scroll-mt-20"
+      >
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+          <Users className="h-6 w-6" />
+        </div>
+        <h2 className="mt-4 text-lg font-semibold">
+          The directory is just getting started
+        </h2>
+        <p className="mt-1 max-w-md text-sm text-muted-foreground">
+          No supervisors are listed yet. We&apos;re verifying supervisors against
+          the AHPRA register before they appear here — check back soon, or add
+          your own listing.
+        </p>
+        <Button asChild className="mt-6">
+          <Link href="/supervisors/register">
+            <UserPlus className="h-4 w-4" />
+            List yourself as a supervisor
+          </Link>
+        </Button>
+      </div>
+    );
   }
 
   return (
